@@ -1,2 +1,170 @@
 /// Homepage Styles File
-/// Here we import all the Styles files we need for our Homepage.
+/// Here we import all the Styles files we need for our Homepage. 
+
+@mixin feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+$tablet-breakpoint: 850px;
+$mobile-breakpoint: 500px;
+
+#home-page {
+    width: 413px;
+    margin: 127px auto;
+    background-color: var(--color-box);
+    border-radius: var(--rounding);
+    
+    .image {
+        background-image: url("../../../../public/images/desktop_nft_image.png");
+        background-size: 100%;
+        background-color: var(--color-box);
+        background-repeat: no-repeat;
+        border-radius: var(--rounding) var(--rounding) 0 0;
+        width: 100%;
+        min-height: 399px;
+        display: flex;
+
+        &__description {
+            max-width: 278px;
+            margin: 252px 103px 32px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            &-title {
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 33px;
+                color: var(--color-title);
+                margin: 0;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+
+            &-text {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 160%;
+                letter-spacing: -0.01em;
+                color: var(--color-body);
+                margin: 0;
+            }
+        }
+
+    }
+    
+    .features {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 32px;
+        padding: 9px 0 31px;
+        border-bottom: 1px solid var(--color-stroke);
+        
+        &__price {
+            @include feature();
+
+            &-value {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 160%;
+                letter-spacing: -0.01em;
+                color: var(--color-primary);
+            }
+        }
+
+        &__time {
+            @include feature();
+
+            &-left {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 160%;
+                letter-spacing: -0.01em;
+                color: var(--color-body);
+            }
+        }
+
+        &__icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .author {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        margin: 24px 32px;
+
+        &__photo {
+            width: 40px;
+            height: 40px;
+        }
+
+        &__signature {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 160%;
+            letter-spacing: -0.01em;
+            color: var(--color-body);
+
+            &-name {
+                font-weight: 600;
+                color: var(--color-title);
+            }
+        }
+    }
+
+    @media (max-width: $tablet-breakpoint) {
+        width: 343px;
+        margin: 354px auto;
+        
+        .image {
+            background-image: url("../../../../public/images/tablet_mobile_nft.png");
+            min-height: 336px;
+    
+            &__description {
+                max-width: 251px;
+                margin: 229px 68px 0 24px;
+                gap: 16px;
+            }
+        }
+        
+        .features {
+            margin: 0 24px 4px;
+            padding: 24px 9px 20px 0;
+            
+            &__price {
+                @include feature();
+    
+                &-value {
+                    font-size: 16px;        
+                }
+            }
+    
+            &__time {
+                @include feature();
+    
+                &-left {
+                    font-size: 14px;
+                }
+            }
+        }
+    
+        .author {
+            margin: 20px 24px;
+    
+            &__signature {
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+        margin: 163px 16px;
+    }
+}
