@@ -5,26 +5,41 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/global-styles/style.scss">
   <title>INVO Academy JS Starter with Vite</title>
 </head>
 
-<!-- In order to start your challenge, remove all the content inside <div id="home-page"></div> and start coding :) -->
-
 <body>
   <div id="home-page">
-    <div>
-      <img src="/public/images/javascript.svg" class="logo vanilla" alt="JavaScript logo" />
-      <h1>INVO Academy JS Starter with Vite</h1>
-      <p>
-        See the README.md for more information on how to start your challenge.
-      </p>
-      <div class="card">
-        <button id="counter" type="button"></button>
+    <main class="image">
+      <div class="image__description">
+        <h1 class="image__description-title">
+          Equilibrium #3429
+        </h1>
+        <p class="image__description-text">
+          Equilibrium is an NFT that will appeal to many players.
+        </p>
       </div>
-    </div>
+    </main>
+    <section class="features">
+      <div class="features__price">
+        <img src="public/images/diamonds.svg" alt="diamond" class="features__icon">
+        <span class="features__price-value">0.041 ETH</span>
+      </div>
+      <div class="features__time">
+        <img src="public/images/clock.svg" alt="clock" class="features__icon">
+        <span class="features__time-left">3 days left</span>
+      </div>
+    </section>
+    <footer class="author">
+      <img src="public/images/author.png" alt="author photo" class="author__photo">
+      <span class="author__signature">
+        Creation of
+        <span class="author__signature-name">Eva Smitch</span>
+      </span>
+    </footer>
   </div>
 
-  <script type="module" src="/src/global-scripts/main.js"></script>
   <script type="module" src="/src/pages/home-page/scripts/home-page.js"></script>
 </body>
 
